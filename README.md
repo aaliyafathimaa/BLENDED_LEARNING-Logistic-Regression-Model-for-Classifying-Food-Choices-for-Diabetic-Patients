@@ -42,7 +42,8 @@ food_df = pd.read_csv(dataset_url)
 food_df.dtypes
 ```
 
-![alt text](image.png)
+![image](https://github.com/user-attachments/assets/27660003-a8ee-43ef-81bc-18d6ebeded61)
+
 
 ```py
 X_raw = food_df.iloc[:, :-1]
@@ -52,7 +53,9 @@ X = scaler.fit_transform(X_raw)
 print(f"The range of feature inputs are within {X.min()} to {X.max()}")
 ```
 
-![alt text](image-1.png)
+![image-1](https://github.com/user-attachments/assets/e0db35ce-f419-4bd5-a58d-4400119d8bcd)
+
+
 
 ```py
 label_encoder = LabelEncoder()
@@ -62,7 +65,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratif
 print(f"Training dataset shape, X_train: {X_train.shape}, y_train: {y_train.shape}")
 print(f"Testing dataset shape, X_test: {X_test.shape}, y_test: {y_test.shape}")
 ```
-![alt text](image-2.png)
+![image-2](https://github.com/user-attachments/assets/635b3e4d-9d56-4038-a3fa-c5ba137d6c5b)
+
 
 ```py
 penalty= 'elasticnet'
@@ -74,7 +78,8 @@ en_model = LogisticRegression(random_state=2, penalty=penalty, multi_class=multi
 en_model.fit(X_train, y_train)
 ```
 
-![alt text](image-3.png)
+![image-3](https://github.com/user-attachments/assets/4bac1739-2e70-426f-93d2-6edeb2e80c4a)
+
 
 ```py
 def evaluate_metrics(y_true, y_pred):
@@ -107,7 +112,8 @@ print(en_metrics)
 
 ## Output:
 
-![alt text](image-4.png)
+![image-4](https://github.com/user-attachments/assets/93e52c90-5981-4cf7-b380-06096f6f9202)
+
 
 
 ## Result:
